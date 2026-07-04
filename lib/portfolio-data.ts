@@ -125,6 +125,14 @@ export const PERSONAL_PROJECTS: Project[] = [
     screenshotSrc: "/projects/atelier.png",
   },
   {
+    id: "portfolio-3d",
+    title: "3D Portfolyo",
+    url: "https://fatih-emre-portfolio.vercel.app/",
+    description: "3D portfolyo deneyimi · Next.js, Three.js, React",
+    screenshotFile: "portfolio-3d.png",
+    screenshotSrc: "/projects/portfolio-3d.png",
+  },
+  {
     id: "nexora",
     title: "Nexora",
     url: "https://nexora-six-wheat.vercel.app/",
