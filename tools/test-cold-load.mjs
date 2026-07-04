@@ -22,7 +22,7 @@ async function runScenario(label, throttle) {
   }
 
   const t0 = Date.now();
-  await page.goto("http://127.0.0.1:8080/", { waitUntil: "domcontentloaded", timeout: 120000 });
+  await page.goto("http://127.0.0.1:3000/", { waitUntil: "domcontentloaded", timeout: 120000 });
   await page.waitForFunction(
     () => document.getElementById("body-wrap")?.classList.contains("is-ready"),
     { timeout: 90000 }

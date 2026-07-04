@@ -1,23 +1,23 @@
 @font-face {
-  src: url("assets/fonts/DMSans-Regular.ttf");
+  src: url("/fonts/DMSans-Regular.ttf");
   font-family: "DMSans-Regular";
   font-display: swap;
 }
 
 @font-face {
-  src: url("assets/fonts/DMSans-Light.ttf");
+  src: url("/fonts/DMSans-Light.ttf");
   font-family: "DMSans-Light";
   font-display: swap;
 }
 
 @font-face {
-  src: url("assets/fonts/DMSans-ThinItalic.ttf");
+  src: url("/fonts/DMSans-ThinItalic.ttf");
   font-family: "DMSans-ThinItalic";
   font-display: swap;
 }
 
 @font-face {
-  src: url("assets/fonts/DMSans-Medium.ttf");
+  src: url("/fonts/DMSans-Medium.ttf");
   font-family: "DMSans-Medium";
   font-display: swap;
 }
@@ -46,7 +46,7 @@ body {
   --color-bg-contact: #06040a;
   --color-text-contact: #ffffff;
 
-  /* Hero watermark mask — tune these to cover Pixverse.ai badge in top-right */
+  /* Hero watermark mask â€” tune these to cover Pixverse.ai badge in top-right */
   --wm-mask-top: 0%;
   --wm-mask-right: 0%;
   --wm-mask-width: 22%;
@@ -259,7 +259,7 @@ a {
   pointer-events: none;
 }
 
-/* Covers burned-in Pixverse watermark — above video, below UI (logo z-30, copy z-12, nav z-40) */
+/* Covers burned-in Pixverse watermark â€” above video, below UI (logo z-30, copy z-12, nav z-40) */
 .hero-watermark-mask {
   position: absolute;
   top: var(--wm-mask-top);
@@ -431,7 +431,7 @@ a {
   color: #d5ff3f;
 }
 
-/* ── Sticky site nav ── */
+/* â”€â”€ Sticky site nav â”€â”€ */
 
 .site-nav {
   position: fixed;
@@ -518,7 +518,7 @@ a {
   font-family: var(--font-medium);
 }
 
-/* ── Portfolio sections ── */
+/* â”€â”€ Portfolio sections â”€â”€ */
 
 .portfolio {
   position: relative;
@@ -1219,4 +1219,100 @@ body.hero-complete .hero-scroll-hint {
   .hero-scroll-hint span::after {
     content: " — static preview";
   }
+}
+
+
+/* Contact form — ready for future Resend wiring */
+.contact-form {
+  margin-top: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  max-width: 560px;
+}
+
+.contact-form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contact-form-label {
+  font-family: var(--font-medium);
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.contact-form-input,
+.contact-form-textarea {
+  width: 100%;
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-family: var(--font-light);
+  font-size: 16px;
+  line-height: 1.4;
+  transition: border-color 0.25s ease;
+}
+
+.contact-form-input:focus,
+.contact-form-textarea:focus {
+  outline: none;
+  border-color: rgba(213, 255, 63, 0.45);
+}
+
+.contact-form-textarea {
+  min-height: 140px;
+  resize: vertical;
+}
+
+.contact-form-error {
+  margin: 0;
+  font-family: var(--font-light);
+  font-size: 13px;
+  color: #ff6b6b;
+}
+
+.contact-form-submit {
+  align-self: flex-start;
+  padding: 14px 28px;
+  background: var(--color-accent);
+  border: none;
+  color: #000000;
+  font-family: var(--font-medium);
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: opacity 0.25s ease;
+}
+
+.contact-form-submit:hover {
+  opacity: 0.85;
+}
+
+.contact-form-submit:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.contact-form-note {
+  margin: var(--space-sm) 0 0;
+  font-family: var(--font-light);
+  font-size: 13px;
+  opacity: 0.55;
+  letter-spacing: 0.5px;
+}
+
+.contact-form-success {
+  margin: var(--space-md) 0 0;
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid rgba(213, 255, 63, 0.35);
+  background: rgba(213, 255, 63, 0.08);
+  font-family: var(--font-light);
+  font-size: 14px;
+  color: var(--color-accent);
 }
