@@ -1,0 +1,204 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#06040a" />
+    <meta
+      name="description"
+      content="Fatih Emre Barutçu — Serbest full-stack geliştirici. Next.js, React Native, Flutter, TypeScript."
+    />
+    <title>Fatih Emre Barutçu — Full-Stack Geliştirici</title>
+    <link rel="icon" href="assets/logo.svg" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="loading-wrap" class="loading-wrap" aria-hidden="false">
+      <div class="loading-inner">
+        <div class="loading-gradient" aria-hidden="true"></div>
+        <div class="loading-bar" id="loading-bar">
+          <svg width="82" height="82" viewBox="0 0 82 82" aria-hidden="true">
+            <circle r="40" cx="41" cy="41" fill="transparent" stroke="#d5ff3f" stroke-width="1" />
+            <circle
+              r="40"
+              cx="41"
+              cy="41"
+              fill="transparent"
+              stroke="#d5ff3f"
+              stroke-width="1"
+              stroke-dasharray="251.327"
+              stroke-dashoffset="251.327"
+              class="loading-bar-circle"
+            />
+          </svg>
+          <div class="loading-bar-text" id="loading-text">0%</div>
+        </div>
+      </div>
+    </div>
+
+    <div id="body-wrap" class="body-wrap">
+      <header class="site-header">
+        <a href="#" class="logo-link" aria-label="Ana sayfa">
+          <img src="assets/logo.svg" alt="" class="site-logo" width="80" height="80" />
+        </a>
+      </header>
+
+      <nav class="site-nav" id="site-nav" aria-label="Ana menü">
+        <a href="#" class="site-nav-brand">Fatih Emre Barutçu</a>
+        <button class="site-nav-toggle" id="site-nav-toggle" aria-expanded="false" aria-controls="site-nav-menu">
+          Menü
+        </button>
+        <ul class="site-nav-menu" id="site-nav-menu">
+          <li><a href="#about" class="site-nav-link">Hakkımda</a></li>
+          <li><a href="#work" class="site-nav-link">Projeler</a></li>
+          <li><a href="#contact" class="site-nav-link site-nav-link--accent">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <section class="hero-scroll" id="hero-scroll" aria-label="Hero">
+        <div class="hero-pin">
+          <video
+            id="hero-video"
+            class="hero-video"
+            muted
+            playsinline
+            preload="none"
+            aria-hidden="true"
+          ></video>
+          <div class="hero-watermark-mask" aria-hidden="true"></div>
+          <div class="hero-vignette" aria-hidden="true"></div>
+
+          <div class="hero-copy" id="hero-copy">
+            <div class="hero-state is-active" data-state="0">
+              <h1 class="hero-title">DENEYİMLER<br />TASARLIYORUZ</h1>
+              <p class="hero-subtitle">full-stack geliştirici</p>
+            </div>
+            <div class="hero-state" data-state="1">
+              <h1 class="hero-title">WEB İÇİN<br />GELİŞTİR</h1>
+              <p class="hero-subtitle">Next.js · TypeScript · Node.js</p>
+            </div>
+            <div class="hero-state" data-state="2">
+              <h1 class="hero-title">MOBİLE<br />TAŞI</h1>
+              <p class="hero-subtitle">Flutter · React Native</p>
+            </div>
+            <div class="hero-state" data-state="3">
+              <h1 class="hero-title">AI<br />ENTEGRASYONU</h1>
+              <p class="hero-subtitle">canlıya hazır teslim</p>
+            </div>
+          </div>
+
+          <div class="hero-scroll-hint">
+            <img src="assets/scroll-hint.gif" alt="" class="scroll-gif" width="100" height="100" />
+            <span>keşfetmek için kaydır</span>
+          </div>
+        </div>
+      </section>
+
+      <nav class="nav-overlay" id="nav-overlay" aria-label="Full screen menu">
+        <div class="nav-overlay-inner">
+          <ul class="nav-links">
+            <li><a href="#">ana sayfa</a></li>
+            <li><a href="#about">hakkımda</a></li>
+            <li><a href="#work">projeler</a></li>
+            <li><a href="#contact" class="nav-email">emrecompbarutcu@gmail.com</a></li>
+          </ul>
+        </div>
+      </nav>
+
+      <div class="portfolio" id="portfolio">
+        <section class="section section--about" id="about" aria-labelledby="about-heading">
+          <div class="section-inner">
+            <div class="about-grid">
+              <div class="about-copy reveal">
+                <p class="section-eyebrow">Hakkımda</p>
+                <h2 class="section-title" id="about-heading">Fatih Emre Barutçu</h2>
+                <p class="section-body">
+                  Bilgisayar Mühendisliği mezunuyum (2025). Flutter/Dart ve React Native ile mobil uygulamalar,
+                  TypeScript, React, Next.js ve Node.js ile web uygulamaları geliştiriyorum. AI API entegrasyonu
+                  ve canlıya alınmış projeler konusunda saha deneyimim var. Takım odaklı, sorumluluk sahibi,
+                  temiz koda önem veren ve yeni teknolojileri öğrenmeye hevesli bir geliştiriciyim.
+                </p>
+
+                <div id="skills-groups" class="skills-groups"></div>
+
+                <div class="about-subsection reveal">
+                  <h3 class="about-subheading">Deneyim</h3>
+                  <div id="experience-list" class="timeline-list"></div>
+                </div>
+
+                <div class="about-subsection reveal">
+                  <h3 class="about-subheading">Eğitim</h3>
+                  <div id="education-list" class="edu-list"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--work" id="work" aria-labelledby="work-heading">
+          <div
+            class="work-decor placeholder-media work-decor-render"
+            role="img"
+            aria-label="Dekoratif 3D render"
+          >
+            <span class="placeholder-label">Yerine koy: assets/3d-render-mechanical.png</span>
+          </div>
+
+          <div class="section-inner">
+            <div class="work-subsection reveal">
+              <p class="section-eyebrow">YAPILMIŞ İŞLER</p>
+              <h2 class="section-title" id="work-heading">Teslim edilen projeler.</h2>
+              <p class="section-subtext">
+                Anlaşma sağlanmış müşteri işleri. Canlıya alınmış veya teslim sürecindeki projeler.
+              </p>
+              <div class="browser-grid browser-grid--client" id="client-work-grid"></div>
+            </div>
+
+            <div class="work-subsection work-subsection--personal reveal">
+              <h2 class="section-title section-title--sm">Kişisel projeler.</h2>
+              <p class="section-subtext">
+                Kişisel projeler ve sektörel ön çalışma konseptleri. Gerçek marka isimleri kullanılmadan sunulmuştur.
+              </p>
+              <div class="browser-grid browser-grid--personal" id="personal-work-grid"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="section section--contact" id="contact" aria-labelledby="contact-heading">
+          <div class="section-inner">
+            <div class="contact-block reveal">
+              <p class="section-eyebrow">İletişim</p>
+              <h2 class="section-title" id="contact-heading">Bir fikrin var — birlikte canlıya alalım.</h2>
+              <p class="section-body">
+                Web veya mobil uygulama, AI entegrasyonu ya da mevcut bir ürünün geliştirilmesi — projenizi
+                dinleyeyim. Doğrudan e-posta veya telefon ile ulaşabilirsiniz; genellikle 48 saat içinde dönüş yapıyorum.
+              </p>
+              <ul class="contact-channels" aria-label="İletişim bilgileri">
+                <li>
+                  <a href="mailto:emrecompbarutcu@gmail.com" class="contact-channel" aria-label="E-posta gönder">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 4h16v16H4V4zm8 8.5L6.5 7h11L12 12.5zm0 1l5.5 4.5h-11L12 13.5z" fill="currentColor"/></svg>
+                    <span>emrecompbarutcu@gmail.com</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="tel:+905331490251" class="contact-channel" aria-label="Telefon et">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.5 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.3 0 .7-.2 1L6.6 10.8z" fill="currentColor"/></svg>
+                    <span>+90 533 149 02 51</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <footer class="portfolio-footer">
+          <p>© <span id="year"></span> Fatih Emre Barutçu. Tüm hakları saklıdır.</p>
+        </footer>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="portfolio-data.js"></script>
+    <script src="portfolio.js"></script>
+  </body>
+</html>
