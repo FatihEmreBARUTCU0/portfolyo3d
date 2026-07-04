@@ -7,14 +7,6 @@ import { CLIENT_PROJECTS, PERSONAL_PROJECTS } from "@/lib/portfolio-data";
 export function ProjectsSection() {
   return (
     <section className="section section--work" id="work" aria-labelledby="work-heading">
-      <div
-        className="work-decor placeholder-media work-decor-render"
-        role="img"
-        aria-label="Dekoratif 3D render"
-      >
-        <span className="placeholder-label">Yerine koy: assets/3d-render-mechanical.png</span>
-      </div>
-
       <div className="section-inner">
         <Reveal>
           <div className="work-subsection">

@@ -10,7 +10,7 @@ export const SITE = {
   title: "Full-Stack Geliştirici",
   description:
     "Fatih Emre Barutçu — Serbest full-stack geliştirici. Next.js, React Native, Flutter, TypeScript.",
-  url: "https://fatih-emre-barutcu.vercel.app",
+  url: "https://fatihemrebarutcu-portfolyo.vercel.app",
   locale: "tr_TR",
 } as const;
 
