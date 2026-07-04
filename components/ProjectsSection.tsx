@@ -25,9 +25,9 @@ export function ProjectsSection() {
             <p className="section-subtext">
               Anlaşma sağlanmış müşteri işleri. Canlıya alınmış veya teslim sürecindeki projeler.
             </p>
-            <div className="browser-grid browser-grid--client" id="client-work-grid">
+            <div className="browser-grid browser-grid--personal" id="client-work-grid">
               {CLIENT_PROJECTS.map((project) => (
-                <RevealBrowserCard key={project.id} project={project} />
+                <RevealBrowserCard key={project.id} project={project} compact />
               ))}
             </div>
           </div>

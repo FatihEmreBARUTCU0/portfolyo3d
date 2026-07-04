@@ -13,6 +13,29 @@ export function SiteNav({ heroScrollRef }: SiteNavProps) {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
+    const nav = document.getElementById("site-nav");
+    if (!nav) return;
+
+    const syncNavHeight = () => {
+      document.documentElement.style.setProperty(
+        "--nav-height",
+        `${Math.ceil(nav.getBoundingClientRect().height)}px`
+      );
+    };
+
+    syncNavHeight();
+
+    const observer = new ResizeObserver(syncNavHeight);
+    observer.observe(nav);
+    window.addEventListener("resize", syncNavHeight, { passive: true });
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("resize", syncNavHeight);
+    };
+  }, []);
+
+  useEffect(() => {
     const heroScroll = heroScrollRef.current;
     if (!heroScroll) return;
 

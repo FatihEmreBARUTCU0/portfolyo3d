@@ -116,6 +116,15 @@ export const CLIENT_PROJECTS: Project[] = [
 
 export const PERSONAL_PROJECTS: Project[] = [
   {
+    id: "atelier",
+    title: "ATELIER",
+    url: "https://giyim-store.vercel.app/",
+    description:
+      "Full-Stack E-Commerce Application · Next.js 16, Supabase, Stripe, Resend",
+    screenshotFile: "atelier.png",
+    screenshotSrc: "/projects/atelier.png",
+  },
+  {
     id: "nexora",
     title: "Nexora",
     url: "https://nexora-six-wheat.vercel.app/",

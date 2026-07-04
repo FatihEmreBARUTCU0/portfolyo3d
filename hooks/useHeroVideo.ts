@@ -341,15 +341,9 @@ export function useHeroVideo() {
         setActiveHeroState(nextState);
       }
 
-      if (progress > 0.9 && !navOverlayOpen) {
-        setNavOverlayVisible(true);
-      } else if (progress <= 0.82 && !navOverlayOpen) {
-        setNavOverlayVisible(false);
-      }
-
       setHeroComplete(progress >= 0.995);
     },
-    [navOverlayOpen, resolveHeroState]
+    [resolveHeroState]
   );
 
   const animationLoop = useCallback(() => {
@@ -452,7 +446,7 @@ export function useHeroVideo() {
   const toggleNavOverlay = useCallback(() => {
     setNavOverlayOpen((open) => {
       const next = !open;
-      if (next) setNavOverlayVisible(true);
+      setNavOverlayVisible(next);
       return next;
     });
   }, []);
