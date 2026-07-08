@@ -116,6 +116,14 @@ export const CLIENT_PROJECTS: Project[] = [
 
 export const PERSONAL_PROJECTS: Project[] = [
   {
+    id: "atolye-baski",
+    title: "atölye baskı",
+    url: "https://eticaret-proje-ebon.vercel.app/",
+    description: "Full-Stack e-ticaret projesi · Next.js, Supabase, Stripe",
+    screenshotFile: "atolye-baski.png",
+    screenshotSrc: "/projects/atolye-baski.png",
+  },
+  {
     id: "atelier",
     title: "ATELIER",
     url: "https://giyim-store.vercel.app/",
